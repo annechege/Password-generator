@@ -62,7 +62,8 @@ class TestCredential(unittest.TestCase):
     '''
     test to check if we can find a credential by phone number and display information
     '''
-self.new_credential.save_credential()
+
+    self.new_credential.save_credential()
     test_credential = Credential("NickKorgoren","Better00","0714042437") #new credential
     test_credential.save_credential()
 
