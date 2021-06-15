@@ -49,3 +49,14 @@ class Credential:
         return True
 
     return False
+    @classmethod
+  def display_credentials(cls):
+    '''
+    method that returns the credential list
+    '''
+    return cls.credential_list
+
+  @classmethod
+  def copy_pwd(cls,number):
+    credential_found = Credential.find_credential_by_number(number)
+    pyperclip.copy(credential_found.password)
