@@ -9,7 +9,9 @@ class Credential:
     self.credential_name = credential_name
     self.password = password
     self.number = number
-    def save_credential(self):
+
+
+  def save_credential(self):
     '''
     save_credential method saves credential object into the credential_list
     '''
@@ -22,7 +24,8 @@ class Credential:
     '''
 
     Credential.credential_list.remove(self)
-    @classmethod
+
+  @classmethod
   def find_credential_by_number(cls,number):
     '''
     Method that takes in a number and returns a credential that matches that number.
@@ -35,7 +38,8 @@ class Credential:
     for credential in cls.credential_list:
       if credential.number == number:
         return credential
- @classmethod
+
+  @classmethod
   def credential_exist(cls,number):
     '''
     Method that checks if a credential exists from the credential list.
@@ -49,7 +53,8 @@ class Credential:
         return True
 
     return False
-    @classmethod
+
+  @classmethod
   def display_credentials(cls):
     '''
     method that returns the credential list
