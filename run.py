@@ -45,4 +45,22 @@ def display_users():
   Function that returns all the saved users
   '''
   return User.display_users()
+#functions for user_credential
+def create_credential(uname,password,phone):
+  '''
+  Function to create a new credential
+  '''
+  new_credential = Credential(uname,password,phone)
+  return new_credential
 
+def save_credential(credential):
+  '''
+  Function to save credential
+  '''
+  credential.save_credential()
+
+def del_credential(credential):
+  '''
+  Function to delete a credential
+  '''
+  credential.delete_credential()
