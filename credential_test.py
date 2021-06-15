@@ -62,3 +62,42 @@ class TestCredential(unittest.TestCase):
     '''
     test to check if we can find a credential by phone number and display information
     '''
+self.new_credential.save_credential()
+    test_credential = Credential("NickKorgoren","Better00","0714042437") #new credential
+    test_credential.save_credential()
+
+    found_credential = Credential.find_credential_by_number("0714042437")
+
+    self.assertEqual(found_credential.credential_name,test_credential.credential_name)
+
+  def test_credential_exists(self):
+    '''
+    test to check if we can return a Boolean if we cannot find a credential
+    '''
+
+    self.new_credential.save_credential()
+    test_credential = Credential("NickKorgoren","Better00","0714042437") #new credential
+    test_credential.save_credential()
+
+    credential_exists = Credential.credential_exist("0714042437")
+
+    self.assertTrue(credential_exists)
+
+  def test_display_all_credentials(self):
+    '''
+    method that returns a list of all credentials saved
+    '''
+    self.assertEqual(Credential.display_credentials(),Credential.credential_list)
+
+  def test_copy_email(self):
+        '''
+        Test to confirm that we are copying the email address from a found credential
+        '''
+
+        self.new_credential.save_credential()
+        Credential.copy_pwd("0725470732")
+
+        self.assertEqual(self.new_credential.password,pyperclip.paste())
+
+if __name__ == '__main__':
+    unittest.main()
