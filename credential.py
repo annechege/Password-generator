@@ -3,7 +3,7 @@ class Credential:
   """
   a class that creates new credentials for credentials
   """
-  credential_list = []
+  credential_list = print()
 
   def __init__(self, credential_name, password,number):
     self.credential_name = credential_name
@@ -16,7 +16,7 @@ class Credential:
     save_credential method saves credential object into the credential_list
     '''
 
-    Credential.credential_list.append(self)
+    Credential.credential_list.append()
 
   def delete_credential(self):
     '''
