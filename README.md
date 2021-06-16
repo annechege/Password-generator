@@ -4,7 +4,7 @@
 Anne Chege
 
 ## Description
-welcome .This is a python application that manages our passwords and even create new passwords for us.
+This is a python application that manages our passwords and even create new passwords for us.
 
 ### Prerequisites
 You need to have git installed
